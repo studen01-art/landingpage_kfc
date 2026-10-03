@@ -1,0 +1,24 @@
+id,name,category,description,price,image_url,featured,available
+combo-01,Combo Gà Rán 1 Người,Combo,"1 Miếng gà giòn cay + 1 Khoai tây chiên vừa + 1 Ly Pepsi",59000,assets/images/combo-01.svg,true,true
+combo-02,Combo Gà Rán 2 Miếng,Combo,"2 Miếng gà giòn nóng hổi + 1 Khoai tây chiên + 1 Ly Pepsi mát lạnh",92000,assets/images/combo-02.svg,true,true
+combo-03,Combo Gia Đình Vui Vẻ,Combo,"4 Miếng gà giòn cay + 1 Burger Zinger + 2 Khoai tây chiên + 3 Ly Pepsi",199000,assets/images/combo-03.svg,true,true
+combo-04,Combo Nhóm Bạn Tiệc Tùng,Combo,"6 Miếng gà rán + 1 Bắp cải trộn lớn + 1 Khoai tây múi cau + 4 Ly Pepsi",269000,assets/images/combo-04.svg,true,true
+chicken-01,Gà Giòn Cay (1 Miếng),Gà Rán,"Gà giòn cay thơm nức, lớp da giòn rụm bên ngoài và mềm mọng mọng nước bên trong",38000,assets/images/chicken-crispy.svg,false,true
+chicken-02,Gà Truyền Thống (1 Miếng),Gà Rán,"Gà rán công thức nguyên bản với 11 loại thảo mộc và gia vị trứ danh đại tá Sanders",38000,assets/images/chicken-original.svg,false,true
+chicken-03,Cánh Gà Giòn Cay (3 Miếng),Gà Rán,"3 Cánh gà giòn tẩm ướp cay vừa miệng, giòn tan đậm đà đến miếng cuối cùng",62000,assets/images/chicken-wings.svg,false,true
+chicken-04,Gà Popcorn Lắc Phô Mai (Vừa),Gà Rán,"Gà viên không xương chiên vàng giòn rụm lắc đều lớp bột phô mai béo ngậy thơm lừng",49000,assets/images/chicken-popcorn.svg,false,true
+chicken-05,Gà Quay Tiêu Đậm Vị (1 Miếng),Gà Rán,"Gà nướng sốt tiêu đen thơm lừng, da mỏng thấm đẫm hương vị thảo mộc thiên nhiên",42000,assets/images/chicken-roast.svg,false,false
+burger-01,Burger Zinger,Burger,"Phi lê gà giòn cay kẹp cùng xà lách tươi giòn tan và xốt mayonnaise béo dịu thơm lừng",56000,assets/images/burger-zinger.svg,false,true
+burger-02,Burger Tôm Giòn Ngọt,Burger,"Nhân tôm biển tươi giòn ngọt tự nhiên kết hợp bánh mì mè nướng nóng cùng sốt tartar",48000,assets/images/burger-shrimp.svg,false,true
+burger-03,Burger Gà Quay Flava,Burger,"Phi lê gà quay thảo mộc với lớp xốt Flava chua ngọt đậm đà chuẩn vị phương Tây",58000,assets/images/burger-flava.svg,false,true
+rice-01,Cơm Gà Giòn Cay,Cơm,"1 Miếng gà giòn cay ăn kèm cơm dẻo thơm nấu nước luộc gà và xốt gravy đặc trưng",46000,assets/images/rice-chicken.svg,false,true
+rice-02,Cơm Phi Lê Gà Quay Tiêu,Cơm,"Phi lê gà quay tiêu mềm mọng, xốt tiêu thơm nồng ăn kèm xà lách tươi thanh mát",48000,assets/images/rice-roast.svg,false,true
+rice-03,Cơm Gà Bít-tết Xốt Teriyaki,Cơm,"Miếng bít tết gà giòn phủ xốt teriyaki ngọt thanh và hạt mè rang thơm lừng",52000,assets/images/rice-teriyaki.svg,false,true
+snack-01,Khoai Tây Chiên (Vừa),Món Ăn Nhẹ,"Khoai tây nhập khẩu thái mỏng chiên vàng giòn rụm rắc chút muối tinh biển",26000,assets/images/snack-fries.svg,false,true
+snack-02,Khoai Tây Múi Cau,Món Ăn Nhẹ,"Khoai tây nguyên vỏ tẩm gia vị thảo mộc chiên giòn bùi ngọt đậm đà",35000,assets/images/snack-wedges.svg,false,true
+snack-03,Phô Mai Viên (4 Viên),Món Ăn Nhẹ,"Viên phô mai mozzarella kéo sợi béo ngậy phủ bột chiên xù giòn tan thơm phức",38000,assets/images/snack-cheese.svg,false,true
+snack-04,Bắp Cải Trộn (Coleslaw),Món Ăn Nhẹ,"Bắp cải tươi giòn thanh mát trộn xốt kem chua ngọt đặc trưng giải ngấy tuyệt hảo",18000,assets/images/snack-coleslaw.svg,false,true
+drink-01,Pepsi Không Calo (Lon),Thức Uống & Tráng Miệng,"Nước ngọt có ga sảng khoái không calo, ướp lạnh mát lạnh sảng khoái",18000,assets/images/drink-pepsi.svg,false,true
+drink-02,Trà Đào Hạt Chia,Thức Uống & Tráng Miệng,"Trà đào thơm ngát kết hợp miếng đào tươi giòn ngọt và hạt chia thanh mát",28000,assets/images/drink-peach-tea.svg,false,true
+dessert-01,Bánh Trứng Egg Tart (1 Cái),Thức Uống & Tráng Miệng,"Bánh tart nướng nghìn lớp vỏ giòn xốp thơm bơ với nhân kem trứng mịn màng",20000,assets/images/dessert-tart.svg,false,true
+dessert-02,Kem Sundae Dâu,Thức Uống & Tráng Miệng,"Kem tươi vani mát lạnh phủ xốt mứt dâu tây chua ngọt đỏ au hấp dẫn",19000,assets/images/dessert-sundae.svg,false,true

@@ -1,0 +1,764 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="KFC Landing Page - Thưởng thức gà giòn nóng hổi, combo tiết kiệm và thực đơn phong phú chuẩn vị. Đặt món nhanh chóng và tiện lợi!">
+  <title>KFC — Gà Giòn Nóng Hổi, Bật Mood Ăn Ngon!</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+
+  <!-- Bootstrap 5 CSS CDN -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+  <!-- Bootstrap Icons CDN -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- ==========================================================================
+       Header & Sticky Navbar
+       ========================================================================== -->
+  <header>
+    <nav class="navbar navbar-expand-lg kfc-navbar sticky-top" id="mainNavbar">
+      <div class="container">
+        <!-- Brand Logo -->
+        <a class="navbar-brand brand-badge" href="#home" aria-label="KFC Trang chủ">
+          <span class="brand-logo-box">KFC</span>
+          <div>
+            <div class="fw-bolder lh-1 text-kfc-red">VIỆT NAM</div>
+            <span class="brand-subtext d-none d-sm-inline">VIBE CODING DEMO</span>
+          </div>
+        </a>
+
+        <!-- Right Side Nav Actions (Cart Button + Mobile Toggler) -->
+        <div class="d-flex align-items-center gap-2 order-lg-3">
+          <!-- Cart Button with Dynamic Badge -->
+          <button class="btn btn-cart-navbar position-relative" id="cartOpenBtn" type="button" data-bs-toggle="offcanvas" data-bs-target="#cartOffcanvas" aria-controls="cartOffcanvas" aria-label="Xem giỏ hàng, hiện có 0 sản phẩm">
+            <i class="bi bi-cart3 fs-5" aria-hidden="true"></i>
+            <span class="d-none d-sm-inline">Giỏ hàng</span>
+            <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-kfc-yellow text-dark fw-bolder" id="cartBadge">
+              0
+              <span class="visually-hidden">sản phẩm trong giỏ</span>
+            </span>
+          </button>
+
+          <!-- Mobile Toggler -->
+          <button class="navbar-toggler border-0 d-lg-none" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false" aria-label="Mở danh mục điều hướng">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+        </div>
+
+        <!-- Nav Links & CTA -->
+        <div class="collapse navbar-collapse order-lg-2" id="navbarContent">
+          <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" href="#home">Trang chủ</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#featured-combos">Combo Nổi Bật</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#menu-section">Thực Đơn</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#promotions">Ưu Đãi</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#why-us">Tại Sao Chọn KFC?</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#footer-contact">Liên Hệ</a>
+            </li>
+          </ul>
+
+          <div class="d-flex align-items-center d-lg-none mt-3">
+            <a href="#menu-section" class="btn btn-kfc-primary w-100">
+              <i class="bi bi-bag-check-fill" aria-hidden="true"></i>
+              <span>Đặt món ngay</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Desktop CTA -->
+        <div class="d-none d-lg-block order-lg-4 ms-2">
+          <a href="#menu-section" class="btn btn-kfc-primary">
+            <i class="bi bi-bag-check-fill" aria-hidden="true"></i>
+            <span>Đặt món ngay</span>
+          </a>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main id="main-content">
+    <!-- ==========================================================================
+         Hero Section
+         ========================================================================== -->
+    <section class="hero-section" id="home">
+      <div class="container">
+        <div class="row align-items-center">
+          <!-- Hero Text -->
+          <div class="col-lg-6 mb-4 mb-lg-0">
+            <div class="hero-pill-badge">
+              <i class="bi bi-fire text-kfc-red" aria-hidden="true"></i>
+              <span>CÔNG THỨC 11 THẢO MỘC &amp; GIA VỊ NGUYÊN BẢN</span>
+            </div>
+            
+            <h1 class="hero-title">
+              GÀ GIÒN NÓNG HỔI — <br>
+              <span class="highlight-red">BẬT MOOD ĂN NGON!</span>
+            </h1>
+            
+            <p class="hero-desc">
+              Thưởng thức vị gà rán trứ danh giòn rụm bên ngoài, mọng nước đậm vị bên trong. Đa dạng combo siêu hời cho cá nhân, bạn bè và cả gia đình.
+            </p>
+
+            <div class="d-flex flex-column flex-sm-row gap-3">
+              <a href="#menu-section" class="btn btn-kfc-primary">
+                <i class="bi bi-cart-fill" aria-hidden="true"></i>
+                <span>Đặt Món Ngay</span>
+              </a>
+              <a href="#menu-section" class="btn btn-kfc-outline">
+                <i class="bi bi-card-list" aria-hidden="true"></i>
+                <span>Xem Menu Đầy Đủ</span>
+              </a>
+            </div>
+
+            <!-- Features Trust Tags -->
+            <div class="hero-feature-tags">
+              <div class="feature-tag-item">
+                <div class="feature-tag-icon"><i class="bi bi-lightning-charge-fill" aria-hidden="true"></i></div>
+                <span>Giao Nhanh 30'</span>
+              </div>
+              <div class="feature-tag-item">
+                <div class="feature-tag-icon"><i class="bi bi-shield-check" aria-hidden="true"></i></div>
+                <span>100% Gà Tươi</span>
+              </div>
+              <div class="feature-tag-item">
+                <div class="feature-tag-icon"><i class="bi bi-stars" aria-hidden="true"></i></div>
+                <span>Hương Vị Chuẩn KFC</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Hero Image -->
+          <div class="col-lg-6">
+            <div class="hero-image-wrapper">
+              <img src="assets/images/hero-chicken.svg" alt="Xô gà rán KFC vàng ruộm thơm ngon" class="hero-image" width="700" height="500">
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         Featured Deals & Combos Section
+         ========================================================================== -->
+    <section class="py-5 bg-light-warm" id="featured-combos">
+      <div class="container py-3">
+        <div class="section-header text-center">
+          <span class="section-tag">Ưu đãi hấp dẫn</span>
+          <h2 class="section-title">COMBO NỔI BẬT NHẤT</h2>
+          <p class="section-subtitle">Tiết kiệm hơn, thỏa sức chia sẻ cùng hội bạn bè hoặc thưởng thức trọn vẹn bữa ăn ngon một mình.</p>
+        </div>
+
+        <!-- Featured Dynamic Container -->
+        <div class="row g-4" id="featured-container" aria-live="polite">
+          <!-- Featured items will be rendered dynamically by JavaScript from CSV -->
+          <div class="col-12 text-center py-4">
+            <div class="spinner-border spinner-kfc" role="status">
+              <span class="visually-hidden">Đang tải combo nổi bật...</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         Menu Section (Dynamic CSV, Search, Filter & Sort)
+         ========================================================================== -->
+    <section class="py-5" id="menu-section">
+      <div class="container py-3">
+        <div class="section-header text-center">
+          <span class="section-tag">Khám phá món ngon</span>
+          <h2 class="section-title">THỰC ĐƠN KFC ĐA DẠNG</h2>
+          <p class="section-subtitle">Dữ liệu thực đơn được đọc và cập nhật hoàn toàn trực tiếp từ file CSV, dễ dàng tìm kiếm và lựa chọn theo sở thích.</p>
+        </div>
+
+        <!-- Search, Filter & Sort Toolbar -->
+        <div class="controls-card">
+          <div class="row g-3 align-items-center">
+            <!-- Search Input -->
+            <div class="col-lg-7 col-md-6">
+              <div class="search-input-wrapper">
+                <i class="bi bi-search search-icon" aria-hidden="true"></i>
+                <input type="text" id="searchInput" class="form-control form-control-kfc" placeholder="Tìm kiếm món ăn, danh mục, mô tả (ví dụ: gà giòn, burger, khoai)..." aria-label="Tìm kiếm món ăn">
+                <button type="button" id="clearSearchBtn" class="search-clear-btn d-none" aria-label="Xóa nội dung tìm kiếm">
+                  <i class="bi bi-x-circle-fill"></i>
+                </button>
+              </div>
+            </div>
+
+            <!-- Sort Select -->
+            <div class="col-lg-5 col-md-6">
+              <div class="d-flex align-items-center justify-content-md-end gap-2">
+                <label for="sortSelect" class="form-label mb-0 fw-bold text-nowrap text-dark">
+                  <i class="bi bi-arrow-down-up me-1 text-kfc-red"></i>Sắp xếp:
+                </label>
+                <select id="sortSelect" class="form-select form-select-kfc w-auto" aria-label="Sắp xếp món ăn">
+                  <option value="default" selected>Mặc định</option>
+                  <option value="price-asc">Giá: Thấp &rarr; Cao</option>
+                  <option value="price-desc">Giá: Cao &rarr; Thấp</option>
+                </select>
+              </div>
+            </div>
+          </div>
+
+          <!-- Category Filter Pills (populated dynamically from CSV) -->
+          <div class="category-filter-container" id="category-filters" role="group" aria-label="Lọc theo danh mục món ăn">
+            <button type="button" class="btn-filter-category active" data-category="all">Tất cả</button>
+          </div>
+
+          <!-- Results Metadata -->
+          <div class="results-meta-bar">
+            <span id="resultsCount">Đang tải dữ liệu thực đơn...</span>
+            <span id="activeFilterBadge" class="text-kfc-red fw-bold"></span>
+          </div>
+        </div>
+
+        <!-- State Containers -->
+        <!-- 1. Loading State -->
+        <div id="menu-loading" class="state-box">
+          <div class="spinner-border spinner-kfc mb-3" role="status">
+            <span class="visually-hidden">Đang tải...</span>
+          </div>
+          <h4 class="fw-bold">Đang tải menu...</h4>
+          <p class="text-muted mb-0">Đang đọc dữ liệu từ data/menu.csv, vui lòng đợi trong giây lát.</p>
+        </div>
+
+        <!-- 2. Error State -->
+        <div id="menu-error" class="state-box border-danger bg-kfc-soft d-none">
+          <i class="bi bi-exclamation-triangle-fill text-danger fs-1 mb-2"></i>
+          <h4 class="fw-bold text-danger">Không thể tải menu.</h4>
+          <p class="text-muted mb-3">Vui lòng kiểm tra file data/menu.csv hoặc kiểm tra lại kết nối mạng.</p>
+          <button type="button" class="btn btn-kfc-primary" id="retryFetchBtn">
+            <i class="bi bi-arrow-clockwise me-1"></i>Thử tải lại
+          </button>
+        </div>
+
+        <!-- 3. Empty State -->
+        <div id="menu-empty" class="state-box d-none">
+          <i class="bi bi-search text-muted fs-1 mb-2"></i>
+          <h4 class="fw-bold">Chưa có món phù hợp.</h4>
+          <p class="text-muted mb-3">Không tìm thấy món ăn nào khớp với từ khóa hoặc bộ lọc đã chọn.</p>
+          <button type="button" class="btn btn-kfc-outline" id="resetFiltersBtn">
+            <i class="bi bi-arrow-counterclockwise me-1"></i>Đặt lại bộ lọc
+          </button>
+        </div>
+
+        <!-- Menu Product Grid -->
+        <div class="row g-4" id="menu-grid" aria-live="polite">
+          <!-- Rendered dynamically by JavaScript -->
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         Promotion / Hot Deal Banner Section
+         ========================================================================== -->
+    <section class="py-5" id="promotions">
+      <div class="container">
+        <div class="promo-banner">
+          <div class="row align-items-center">
+            <div class="col-lg-8">
+              <span class="promo-badge">
+                <i class="bi bi-fire me-1"></i>HOT DEAL THÁNG NÀY
+              </span>
+              <h2 class="promo-title">BỮA ĂN NGON — CHIA SẺ NIỀM VUI CÙNG HỘI BẠN!</h2>
+              <p class="promo-desc">
+                Cùng nhau tận hưởng từng khoảnh khắc giòn tan rôm rả bên những xô gà rán nóng hổi và combo ưu đãi đặc biệt. Hương vị trọn vẹn cho mọi bữa tiệc sum họp.
+              </p>
+              <div class="d-flex flex-wrap gap-3">
+                <a href="#featured-combos" class="btn btn-kfc-white">
+                  <i class="bi bi-stars me-1"></i>Khám Phá Ưu Đãi Ngay
+                </a>
+                <a href="#menu-section" class="btn btn-kfc-outline border-white text-white">
+                  Xem Menu Món Lẻ
+                </a>
+              </div>
+            </div>
+            <div class="col-lg-4 text-center mt-4 mt-lg-0">
+              <img src="assets/images/combo-03.svg" alt="Combo gà tiệc tùng hấp dẫn" class="img-fluid rounded-4 shadow-lg" style="max-height: 260px;" width="500" height="350">
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         Why Choose Us / Experience Section
+         ========================================================================== -->
+    <section class="py-5 bg-light-warm" id="why-us">
+      <div class="container py-3">
+        <div class="section-header text-center">
+          <span class="section-tag">Cam kết chất lượng</span>
+          <h2 class="section-title">TRẢI NGHIỆM GÀ RÁN CHUẨN VỊ</h2>
+          <p class="section-subtitle">3 giá trị cốt lõi mang đến từng bữa ăn thơm ngon, nóng giòn khó cưỡng.</p>
+        </div>
+
+        <div class="row g-4">
+          <!-- Feature 1 -->
+          <div class="col-md-4">
+            <div class="why-card">
+              <div class="why-icon-box">
+                <i class="bi bi-fire" aria-hidden="true"></i>
+              </div>
+              <h4 class="fw-bold mb-3">Gà Nóng Giòn Chuẩn Vị</h4>
+              <p class="text-muted mb-0">Công thức tẩm ướp 11 loại gia vị và thảo mộc đặc trưng, chiên áp suất để giữ trọn vị ngọt mềm bên trong và da giòn rụm bên ngoài.</p>
+            </div>
+          </div>
+
+          <!-- Feature 2 -->
+          <div class="col-md-4">
+            <div class="why-card">
+              <div class="why-icon-box">
+                <i class="bi bi-grid-1x2-fill" aria-hidden="true"></i>
+              </div>
+              <h4 class="fw-bold mb-3">Combo Tiết Kiệm Đa Dạng</h4>
+              <p class="text-muted mb-0">Đa dạng lựa chọn từ combo 1 người đến tiệc tùng nhóm bạn đông người, kết hợp hài hòa cùng khoai tây giòn và đồ uống sảng khoái.</p>
+            </div>
+          </div>
+
+          <!-- Feature 3 -->
+          <div class="col-md-4">
+            <div class="why-card">
+              <div class="why-icon-box">
+                <i class="bi bi-truck" aria-hidden="true"></i>
+              </div>
+              <h4 class="fw-bold mb-3">Giao Nhanh &amp; Tiện Lợi</h4>
+              <p class="text-muted mb-0">Hệ thống đóng gói giữ nhiệt tiêu chuẩn giúp món ăn giữ nguyên độ nóng sốt và thơm ngon ngay khi giao tới tận tay bạn.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         Final Big CTA Section
+         ========================================================================== -->
+    <section class="final-cta-section text-center" id="final-cta">
+      <div class="container">
+        <h2 class="final-cta-title">SẴN SÀNG CHO MỘT BỮA GÀ GIÒN?</h2>
+        <p class="final-cta-desc">
+          Đặt món ngay hôm nay để nhận trọn vị giòn tan nóng hổi, tiếp thêm năng lượng cho ngày dài bận rộn!
+        </p>
+        <a href="#menu-section" class="btn btn-kfc-primary px-5 py-3 fs-5">
+          <i class="bi bi-bag-check-fill me-2" aria-hidden="true"></i>
+          <span>ĐẶT MÓN NGAY</span>
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <!-- ==========================================================================
+       Footer
+       ========================================================================== -->
+  <footer class="kfc-footer" id="footer-contact">
+    <div class="container">
+      <div class="row g-4">
+        <!-- Brand Column -->
+        <div class="col-lg-4 col-md-6">
+          <div class="d-flex align-items-center gap-2 mb-3">
+            <span class="brand-logo-box">KFC</span>
+            <span class="fw-bold text-white fs-5">VIỆT NAM</span>
+          </div>
+          <p class="small text-secondary mb-3">
+            Thương hiệu gà rán trứ danh toàn cầu với phong cách phục vụ nhanh, năng động, mang đến niềm vui ẩm thực cho mọi người.
+          </p>
+          <div class="d-flex gap-3">
+            <a href="https://kfcvietnam.com.vn/" target="_blank" rel="noopener noreferrer" class="btn btn-outline-light btn-sm rounded-pill" aria-label="Truy cập Website KFC Việt Nam">
+              <i class="bi bi-box-arrow-up-right me-1"></i>Website KFC Việt Nam
+            </a>
+          </div>
+        </div>
+
+        <!-- Quick Links -->
+        <div class="col-lg-2 col-md-6 col-6">
+          <h3 class="footer-heading">Thực Đơn</h3>
+          <ul class="footer-links">
+            <li><a href="#featured-combos">Combo Bán Chạy</a></li>
+            <li><a href="#menu-section">Gà Rán Giòn Cay</a></li>
+            <li><a href="#menu-section">Burger &amp; Cơm</a></li>
+            <li><a href="#menu-section">Món Ăn Nhẹ</a></li>
+            <li><a href="#menu-section">Thức Uống &amp; Tráng Miệng</a></li>
+          </ul>
+        </div>
+
+        <!-- Information Links -->
+        <div class="col-lg-2 col-md-6 col-6">
+          <h3 class="footer-heading">Thông Tin</h3>
+          <ul class="footer-links">
+            <li><a href="#home">Trang chủ</a></li>
+            <li><a href="#promotions">Ưu Đãi Hot</a></li>
+            <li><a href="#why-us">Về Chất Lượng</a></li>
+            <li><a href="#menu-section">Chính Sách Giao Hàng</a></li>
+          </ul>
+        </div>
+
+        <!-- Contact Demo Column -->
+        <div class="col-lg-4 col-md-6">
+          <h3 class="footer-heading">Liên Hệ &amp; Hỗ Trợ</h3>
+          <ul class="footer-links">
+            <li class="d-flex align-items-center gap-2">
+              <i class="bi bi-telephone-fill text-kfc-red"></i>
+              <span>Tổng đài đặt hàng: <strong>1900 xxxx (Demo)</strong></span>
+            </li>
+            <li class="d-flex align-items-center gap-2">
+              <i class="bi bi-clock-fill text-kfc-red"></i>
+              <span>Giờ mở cửa: 09:00 - 22:00 hàng ngày</span>
+            </li>
+            <li class="d-flex align-items-center gap-2">
+              <i class="bi bi-geo-alt-fill text-kfc-red"></i>
+              <span>Hệ thống nhà hàng rộng khắp toàn quốc</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Disclaimer Banner -->
+      <div class="disclaimer-box">
+        <i class="bi bi-info-circle-fill me-2 text-kfc-red"></i>
+        <strong>Tuyên bố miễn trừ trách nhiệm (Disclaimer):</strong>
+        Landing page demo / marketing độc lập phục vụ mục đích học tập &amp; trình diễn Vibe Coding + Antigravity — không phải website chính thức hay hệ thống đặt hàng thương mại của KFC Việt Nam.
+      </div>
+
+      <!-- Copyright Bottom Bar -->
+      <div class="footer-bottom-bar text-secondary">
+        <div class="row align-items-center">
+          <div class="col-md-6 text-center text-md-start mb-2 mb-md-0">
+            &copy; 2026 KFC Landing Page Demo Project. Dữ liệu menu từ CSV.
+          </div>
+          <div class="col-md-6 text-center text-md-end">
+            <a href="https://kfcvietnam.com.vn/" target="_blank" rel="noopener noreferrer" class="text-secondary text-decoration-none">
+              Nguồn tham khảo: kfcvietnam.com.vn
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ==========================================================================
+       Product Detail Modal (Bootstrap 5 Modal)
+       ========================================================================== -->
+  <div class="modal fade" id="productModal" tabindex="-1" aria-labelledby="modalProductTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+      <div class="modal-content modal-content-kfc">
+        <div class="modal-header border-0 pb-0">
+          <span class="badge badge-kfc" id="modalCategoryBadge">Danh mục</span>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Đóng cửa sổ"></button>
+        </div>
+        <div class="modal-body p-4 pt-2">
+          <div class="row g-4 align-items-center">
+            <!-- Modal Image -->
+            <div class="col-md-6 text-center">
+              <div class="rounded-4 overflow-hidden shadow-sm">
+                <img id="modalProductImg" src="assets/images/placeholder.svg" alt="Hình ảnh món ăn" class="modal-product-img">
+              </div>
+            </div>
+
+            <!-- Modal Details -->
+            <div class="col-md-6">
+              <h3 class="fw-bold mb-2" id="modalProductTitle">Tên món ăn</h3>
+              <div class="d-flex align-items-center gap-2 mb-3">
+                <div class="modal-price-tag" id="modalProductPrice">0 ₫</div>
+                <span id="modalAvailabilityBadge" class="badge bg-success">Còn hàng</span>
+              </div>
+              <p class="text-muted mb-4" id="modalProductDesc">Mô tả chi tiết món ăn sẽ hiển thị ở đây.</p>
+
+              <!-- Quantity Selector -->
+              <div class="d-flex align-items-center gap-3 mb-4">
+                <span class="fw-bold text-dark">Số lượng:</span>
+                <div class="qty-control" role="group" aria-label="Điều chỉnh số lượng">
+                  <button type="button" class="qty-btn" id="modalQtyMinus" aria-label="Giảm số lượng">-</button>
+                  <span class="qty-number" id="modalQtyValue" aria-live="polite">1</span>
+                  <button type="button" class="qty-btn" id="modalQtyPlus" aria-label="Tăng số lượng">+</button>
+                </div>
+              </div>
+
+              <!-- Order CTA in modal -->
+              <div class="d-grid gap-2">
+                <button type="button" class="btn btn-kfc-primary py-3" id="modalAddToCartBtn">
+                  <i class="bi bi-cart-plus-fill me-1" aria-hidden="true"></i>
+                  <span>Thêm Vào Giỏ Hàng (Mô Phỏng)</span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==========================================================================
+       Shopping Cart Offcanvas (Drawer)
+       ========================================================================== -->
+  <div class="offcanvas offcanvas-end kfc-cart-offcanvas" tabindex="-1" id="cartOffcanvas" aria-labelledby="cartOffcanvasLabel">
+    <div class="offcanvas-header border-bottom py-3">
+      <div class="d-flex align-items-center gap-2">
+        <div class="cart-header-icon"><i class="bi bi-bag-check-fill text-kfc-red"></i></div>
+        <div>
+          <h5 class="offcanvas-title fw-bold text-dark mb-0" id="cartOffcanvasLabel">GIỎ HÀNG CỦA BẠN</h5>
+          <span class="small text-muted" id="cartHeaderSubtitle">0 sản phẩm</span>
+        </div>
+      </div>
+      <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Đóng giỏ hàng"></button>
+    </div>
+
+    <div class="offcanvas-body p-0 d-flex flex-column">
+      <!-- Empty Cart State -->
+      <div id="cartEmptyState" class="cart-empty-view text-center py-5 px-4 my-auto d-none">
+        <div class="mb-3">
+          <i class="bi bi-cart-x text-muted" style="font-size: 3.5rem;"></i>
+        </div>
+        <h5 class="fw-bold mb-2">Giỏ hàng đang trống</h5>
+        <p class="text-muted small mb-4">Hãy chọn những món ăn ngon từ thực đơn để thưởng thức nhé!</p>
+        <button type="button" class="btn btn-kfc-primary px-4 py-2" id="cartEmptyExploreBtn">
+          <i class="bi bi-arrow-down-circle me-1"></i>Xem Menu Ngay
+        </button>
+      </div>
+
+      <!-- Cart Items List Container -->
+      <div id="cartItemsList" class="cart-items-list p-3 flex-grow-1 overflow-y-auto">
+        <!-- Rendered dynamically by JavaScript -->
+      </div>
+
+      <!-- Cart Bottom Bar (Subtotal & Actions) -->
+      <div id="cartFooter" class="cart-footer border-top p-3 bg-white">
+        <div class="d-flex justify-content-between align-items-center mb-1">
+          <span class="text-muted small">Tổng số lượng món:</span>
+          <span class="fw-bold text-dark" id="cartTotalQty">0 phần</span>
+        </div>
+        <div class="d-flex justify-content-between align-items-center mb-3">
+          <span class="fw-bold fs-5 text-dark">Tạm tính:</span>
+          <span class="fw-bolder fs-4 text-kfc-red" id="cartSubtotal">0 ₫</span>
+        </div>
+
+        <div class="d-grid gap-2">
+          <button type="button" class="btn btn-kfc-primary py-3 fw-bold" id="cartCheckoutBtn">
+            <i class="bi bi-credit-card-2-front me-2"></i>TIẾN HÀNH ĐẶT MÓN (DEMO)
+          </button>
+          <button type="button" class="btn btn-outline-danger btn-sm py-2" id="cartClearBtn">
+            <i class="bi bi-trash3 me-1"></i>Xóa toàn bộ giỏ hàng
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==========================================================================
+       Clear Cart Confirmation Modal
+       ========================================================================== -->
+  <div class="modal fade" id="clearCartConfirmModal" tabindex="-1" aria-labelledby="clearCartConfirmTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-sm">
+      <div class="modal-content rounded-4 border-0 shadow">
+        <div class="modal-body text-center p-4">
+          <div class="text-danger mb-3">
+            <i class="bi bi-exclamation-circle-fill" style="font-size: 3rem;"></i>
+          </div>
+          <h5 class="fw-bold mb-2" id="clearCartConfirmTitle">Xóa Giỏ Hàng?</h5>
+          <p class="text-muted small mb-4">Bạn có chắc chắn muốn xóa toàn bộ sản phẩm trong giỏ hàng hiện tại?</p>
+          <div class="d-flex gap-2">
+            <button type="button" class="btn btn-light w-50 py-2 fw-semibold" data-bs-dismiss="modal">Hủy</button>
+            <button type="button" class="btn btn-danger w-50 py-2 fw-bold" id="confirmClearCartBtn">Xóa Hết</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==========================================================================
+       Checkout Demo Modal
+       ========================================================================== -->
+  <div class="modal fade" id="checkoutModal" tabindex="-1" aria-labelledby="checkoutModalTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+      <div class="modal-content modal-content-kfc">
+        <div class="modal-header border-0 pb-0">
+          <div>
+            <span class="badge bg-kfc-yellow text-dark fw-bold mb-1">DEMO FRONTEND</span>
+            <h4 class="modal-title fw-bold text-dark" id="checkoutModalTitle">ĐẶT MÓN — THÔNG TIN GIAO HÀNG</h4>
+          </div>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Đóng cửa sổ đặt hàng"></button>
+        </div>
+
+        <div class="modal-body p-4">
+          <div class="alert alert-warning border-0 small py-2 px-3 rounded-3 mb-4">
+            <i class="bi bi-info-circle-fill me-1"></i>
+            <strong>Lưu ý:</strong> Đây là bản mô phỏng đặt hàng frontend. Không có dữ liệu nào được gửi lên server thực tế.
+          </div>
+
+          <div class="row g-4">
+            <!-- Checkout Form -->
+            <div class="col-lg-7">
+              <form id="checkoutForm" novalidate>
+                <div class="mb-3">
+                  <label for="checkoutName" class="form-label fw-bold small">Họ và tên <span class="text-danger">*</span></label>
+                  <input type="text" class="form-control" id="checkoutName" placeholder="Nguyễn Văn A" required>
+                  <div class="invalid-feedback" id="checkoutNameFeedback">Vui lòng nhập họ và tên của bạn.</div>
+                </div>
+
+                <div class="mb-3">
+                  <label for="checkoutPhone" class="form-label fw-bold small">Số điện thoại <span class="text-danger">*</span></label>
+                  <input type="tel" class="form-control" id="checkoutPhone" placeholder="0901234567" required>
+                  <div class="invalid-feedback" id="checkoutPhoneFeedback">Vui lòng nhập số điện thoại hợp lệ (10 số).</div>
+                </div>
+
+                <div class="mb-3">
+                  <label for="checkoutAddress" class="form-label fw-bold small">Địa chỉ nhận hàng <span class="text-danger">*</span></label>
+                  <textarea class="form-control" id="checkoutAddress" rows="2" placeholder="Số nhà, tên đường, phường/xã, quận/huyện..." required></textarea>
+                  <div class="invalid-feedback" id="checkoutAddressFeedback">Vui lòng nhập địa chỉ nhận hàng.</div>
+                </div>
+
+                <div class="mb-3">
+                  <label for="checkoutNote" class="form-label fw-bold small">Ghi chú đơn hàng (tùy chọn)</label>
+                  <input type="text" class="form-control" id="checkoutNote" placeholder="Ví dụ: Giao lên lầu 3, thêm tương ớt...">
+                </div>
+
+                <div class="mb-3">
+                  <label class="form-label fw-bold small">Phương thức thanh toán (Demo)</label>
+                  <div class="form-check p-2 border rounded-3 mb-2 bg-light">
+                    <input class="form-check-input ms-1 me-2" type="radio" name="paymentMethod" id="payCOD" value="COD" checked>
+                    <label class="form-check-label fw-semibold" for="payCOD">
+                      <i class="bi bi-cash-coin me-1 text-success"></i>Thanh toán tiền mặt khi nhận hàng (COD)
+                    </label>
+                  </div>
+                  <div class="form-check p-2 border rounded-3 bg-light">
+                    <input class="form-check-input ms-1 me-2" type="radio" name="paymentMethod" id="payQR" value="QR">
+                    <label class="form-check-label fw-semibold" for="payQR">
+                      <i class="bi bi-qr-code me-1 text-primary"></i>Chuyển khoản VietQR (Mô phỏng)
+                    </label>
+                  </div>
+                </div>
+
+                <div class="d-grid mt-4">
+                  <button type="submit" class="btn btn-kfc-primary py-3 fw-bold" id="confirmCheckoutBtn">
+                    <i class="bi bi-check2-circle me-1"></i>XÁC NHẬN ĐẶT MÓN
+                  </button>
+                </div>
+              </form>
+            </div>
+
+            <!-- Order Summary Preview -->
+            <div class="col-lg-5">
+              <div class="receipt-box h-100 d-flex flex-column">
+                <h6 class="fw-bold border-bottom pb-2 mb-3">TÓM TẮT ĐƠN HÀNG</h6>
+                <div id="checkoutSummaryItems" class="flex-grow-1 overflow-y-auto mb-3" style="max-height: 240px;">
+                  <!-- Dynamically rendered checkout items -->
+                </div>
+                <div class="border-top pt-2">
+                  <div class="d-flex justify-content-between mb-1 small text-muted">
+                    <span>Tạm tính:</span>
+                    <span id="checkoutSummarySubtotal">0 ₫</span>
+                  </div>
+                  <div class="d-flex justify-content-between mb-2 small text-muted">
+                    <span>Phí giao hàng:</span>
+                    <span class="text-success fw-bold">MIỄN PHÍ</span>
+                  </div>
+                  <div class="d-flex justify-content-between align-items-center pt-2 border-top">
+                    <span class="fw-bold">Tổng thanh toán:</span>
+                    <span class="fw-bolder fs-5 text-kfc-red" id="checkoutSummaryTotal">0 ₫</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==========================================================================
+       Demo Order Success Modal
+       ========================================================================== -->
+  <div class="modal fade" id="orderSuccessModal" tabindex="-1" aria-labelledby="orderSuccessTitle" aria-hidden="true" data-bs-backdrop="static">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content rounded-4 border-0 shadow-lg text-center p-4">
+        <div class="modal-body p-2">
+          <div class="order-success-icon mx-auto">
+            <i class="bi bi-check-lg"></i>
+          </div>
+          <h3 class="fw-bolder text-dark mb-2" id="orderSuccessTitle">🎉 ĐẶT MÓN THÀNH CÔNG!</h3>
+          <p class="text-muted mb-3">
+            Cảm ơn bạn đã trải nghiệm tính năng đặt món demo của Landing Page KFC!
+          </p>
+
+          <div class="alert alert-secondary text-start small mb-4 py-2 px-3">
+            <i class="bi bi-shield-exclamation text-warning me-1"></i>
+            <strong>Lưu ý:</strong> Đây là bản demo frontend. Đơn hàng mô phỏng chưa được gửi đến hệ thống KFC thật.
+          </div>
+
+          <div class="receipt-box text-start small mb-4">
+            <div class="d-flex justify-content-between mb-1">
+              <span class="text-muted">Mã đơn hàng:</span>
+              <strong id="successOrderId" class="text-kfc-red">KFC-DEMO-0000</strong>
+            </div>
+            <div class="d-flex justify-content-between mb-1">
+              <span class="text-muted">Người nhận:</span>
+              <strong id="successOrderCustomer">Nguyễn Văn A</strong>
+            </div>
+            <div class="d-flex justify-content-between mb-1">
+              <span class="text-muted">Số điện thoại:</span>
+              <strong id="successOrderPhone">0901234567</strong>
+            </div>
+            <div class="d-flex justify-content-between mb-1">
+              <span class="text-muted">Địa chỉ:</span>
+              <span id="successOrderAddress" class="text-end fw-semibold" style="max-width: 220px;">Địa chỉ</span>
+            </div>
+            <div class="d-flex justify-content-between pt-2 mt-2 border-top">
+              <span class="fw-bold">Tổng tiền:</span>
+              <strong class="text-kfc-red fs-6" id="successOrderTotal">0 ₫</strong>
+            </div>
+          </div>
+
+          <div class="d-flex gap-2">
+            <button type="button" class="btn btn-kfc-outline w-50 py-2" id="successContinueBtn">
+              Tiếp tục mua hàng
+            </button>
+            <a href="#home" class="btn btn-kfc-primary w-50 py-2" id="successHomeBtn">
+              Về trang chủ
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==========================================================================
+       Toast Notification Element
+       ========================================================================== -->
+  <div class="toast-container-kfc">
+    <div id="actionToast" class="toast kfc-toast border-0" role="alert" aria-live="assertive" aria-atomic="true">
+      <div class="d-flex align-items-center p-3">
+        <i class="bi bi-check-circle-fill text-success fs-4 me-3"></i>
+        <div class="toast-body p-0 flex-grow-1" id="toastMessage">
+          Thao tác thành công!
+        </div>
+        <button type="button" class="btn-close ms-2" data-bs-dismiss="toast" aria-label="Đóng thông báo"></button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Bootstrap 5 Bundle JS CDN (includes Popper) -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
+  <!-- Main JavaScript Application -->
+  <script src="js/app.js"></script>
+</body>
+</html>
