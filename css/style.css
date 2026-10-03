@@ -1131,3 +1131,63 @@ a {
   font-size: 2.4rem;
   margin-bottom: 16px;
 }
+
+/* ==========================================================================
+   Module 09: Payment & QR Code Checkout Styles
+   ========================================================================== */
+.payment-nav-pills .nav-link {
+  color: var(--kfc-black);
+  background-color: #FFFFFF;
+  border: 1.5px solid var(--kfc-border-color);
+  border-radius: 12px;
+  font-size: 0.85rem;
+  padding: 10px 12px;
+  transition: all 0.2s ease;
+  text-align: center;
+}
+
+.payment-nav-pills .nav-link:hover {
+  background-color: var(--kfc-red-soft);
+  color: var(--kfc-red);
+  border-color: rgba(228, 0, 43, 0.3);
+}
+
+.payment-nav-pills .nav-link.active {
+  background-color: var(--kfc-red) !important;
+  color: #FFFFFF !important;
+  border-color: var(--kfc-red);
+  box-shadow: 0 4px 12px rgba(228, 0, 43, 0.3);
+}
+
+.qr-card {
+  max-width: 320px;
+  margin: 0 auto;
+}
+
+.qr-display-img {
+  max-width: 260px;
+  height: auto;
+  aspect-ratio: 1 / 1;
+  object-fit: contain;
+  margin: 0 auto;
+  border: 1px solid #ECEFF1;
+}
+
+.bank-details-card {
+  border: 1px solid var(--kfc-border-color);
+}
+
+.copy-btn {
+  font-size: 0.75rem;
+  transition: transform 0.15s ease, background-color 0.15s ease;
+}
+
+.copy-btn:hover {
+  transform: scale(1.1);
+}
+
+.bank-mock-btn.active {
+  background-color: var(--kfc-red);
+  color: #FFFFFF;
+  border-color: var(--kfc-red);
+}

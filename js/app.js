@@ -914,17 +914,21 @@ function handleCheckoutSubmit(e) {
     return;
   }
 
-  // Create Demo Order Result
-  const orderId = 'KFC-DEMO-' + Math.floor(1000 + Math.random() * 9000);
-  const totalAmount = formatPrice(getCartSubtotal());
+  // Read selected payment method (Section 5 & 17)
+  const methodRadio = elements.checkoutForm.querySelector('input[name="checkoutPaymentMethod"]:checked');
+  const selectedMethod = methodRadio ? methodRadio.value : 'qr';
 
-  if (elements.successOrderId) elements.successOrderId.textContent = orderId;
-  if (elements.successOrderCustomer) elements.successOrderCustomer.textContent = nameVal;
-  if (elements.successOrderPhone) elements.successOrderPhone.textContent = phoneVal;
-  if (elements.successOrderAddress) elements.successOrderAddress.textContent = addressVal;
-  if (elements.successOrderTotal) elements.successOrderTotal.textContent = totalAmount;
+  const customerData = {
+    name: nameVal,
+    phone: phoneVal,
+    address: addressVal,
+    note: elements.checkoutNote ? elements.checkoutNote.value.trim() : ''
+  };
 
-  // Clear cart silently after successful demo order
+  const subtotal = getCartSubtotal();
+  const cartItemsSnapshot = [...appState.cart];
+
+  // Clear cart silently after order creation
   clearCart(false);
 
   // Close Checkout Modal
@@ -932,14 +936,26 @@ function handleCheckoutSubmit(e) {
     checkoutModalInstance.hide();
   }
 
-  // Open Order Success Modal
-  if (orderSuccessModalInstance) {
-    orderSuccessModalInstance.show();
-  }
-
   // Reset form
   if (elements.checkoutForm) {
     elements.checkoutForm.reset();
+  }
+
+  // Initiate Payment Flow via PaymentModule (Module 09)
+  if (window.PaymentModule && typeof window.PaymentModule.createOrder === 'function') {
+    const order = window.PaymentModule.createOrder(customerData, cartItemsSnapshot, subtotal, selectedMethod);
+    window.PaymentModule.showPaymentModal(order, selectedMethod);
+  } else {
+    // Safe fallback if payment module is not initialized
+    const orderId = 'KFC-DEMO-' + Math.floor(1000 + Math.random() * 9000);
+    if (elements.successOrderId) elements.successOrderId.textContent = orderId;
+    if (elements.successOrderCustomer) elements.successOrderCustomer.textContent = nameVal;
+    if (elements.successOrderPhone) elements.successOrderPhone.textContent = phoneVal;
+    if (elements.successOrderAddress) elements.successOrderAddress.textContent = addressVal;
+    if (elements.successOrderTotal) elements.successOrderTotal.textContent = formatPrice(subtotal);
+    if (orderSuccessModalInstance) {
+      orderSuccessModalInstance.show();
+    }
   }
 }
 
